@@ -1,0 +1,60 @@
+
+> talent-reveal-rwanda-eventhub@1.0.0 dev
+> node ./node_modules/next/dist/bin/next dev
+
+   ▲ Next.js 15.5.19
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.159:3000
+
+ ✓ Starting...
+ ⚠ Attempted to load @next/swc-win32-x64-msvc, but an error occurred: \\?\C:\Users\Pazzo\Documents\Codex\igiraneza-patrick-portfolio\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node is not a valid Win32 application.
+\\?\C:\Users\Pazzo\Documents\Codex\igiraneza-patrick-portfolio\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node
+ ✓ Ready in 41.3s
+ ○ Compiling / ...
+ ✓ Compiled / in 144.5s (744 modules)
+ GET / 200 in 44869ms
+ GET / 200 in 184564ms
+[Error [TimeoutError]: The operation was aborted due to timeout] {
+  code: 23,
+  INDEX_SIZE_ERR: 1,
+  DOMSTRING_SIZE_ERR: 2,
+  HIERARCHY_REQUEST_ERR: 3,
+  WRONG_DOCUMENT_ERR: 4,
+  INVALID_CHARACTER_ERR: 5,
+  NO_DATA_ALLOWED_ERR: 6,
+  NO_MODIFICATION_ALLOWED_ERR: 7,
+  NOT_FOUND_ERR: 8,
+  NOT_SUPPORTED_ERR: 9,
+  INUSE_ATTRIBUTE_ERR: 10,
+  INVALID_STATE_ERR: 11,
+  SYNTAX_ERR: 12,
+  INVALID_MODIFICATION_ERR: 13,
+  NAMESPACE_ERR: 14,
+  INVALID_ACCESS_ERR: 15,
+  VALIDATION_ERR: 16,
+  TYPE_MISMATCH_ERR: 17,
+  SECURITY_ERR: 18,
+  NETWORK_ERR: 19,
+  ABORT_ERR: 20,
+  URL_MISMATCH_ERR: 21,
+  QUOTA_EXCEEDED_ERR: 22,
+  TIMEOUT_ERR: 23,
+  INVALID_NODE_TYPE_ERR: 24,
+  DATA_CLONE_ERR: 25
+}
+ ○ Compiling /_error ...
+ ✓ Compiled / in 22.1s (610 modules)
+ ✓ Compiled (1073 modules)
+ GET / 200 in 11503ms
+ GET /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1511578314322-379afb476865%3Fauto%3Dformat%26fit%3Dcrop%26w%3D1600%26q%3D80&w=640&q=75 500 in 51151ms
+ GET /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1511578314322-379afb476865%3Fauto%3Dformat%26fit%3Dcrop%26w%3D1600%26q%3D80&w=640&q=75 500 in 29947ms
+ GET / 200 in 370ms
+ GET / 200 in 379ms
+ ○ Compiling /auth/register ...
+ ✓ Compiled /auth/register in 103.5s (1038 modules)
+ GET /auth/register 200 in 121736ms
+ GET /auth/register 200 in 129089ms
+ ✓ Compiled in 11.4s (406 modules)
+ GET /auth/register 200 in 135091ms
+ GET / 200 in 11560ms
+ GET / 200 in 376ms

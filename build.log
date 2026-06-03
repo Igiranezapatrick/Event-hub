@@ -1,0 +1,67 @@
+
+> talent-reveal-rwanda-eventhub@1.0.0 build
+> node ./node_modules/next/dist/bin/next build
+
+   ▲ Next.js 15.5.19
+   - Environments: .env
+
+   Creating an optimized production build ...
+ ⚠ Attempted to load @next/swc-win32-x64-msvc, but an error occurred: \\?\C:\Users\Pazzo\Documents\Codex\igiraneza-patrick-portfolio\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node is not a valid Win32 application.
+\\?\C:\Users\Pazzo\Documents\Codex\igiraneza-patrick-portfolio\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node
+ ⚠ Attempted to load @next/swc-win32-x64-msvc, but an error occurred: \\?\C:\Users\Pazzo\Documents\Codex\igiraneza-patrick-portfolio\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node is not a valid Win32 application.
+\\?\C:\Users\Pazzo\Documents\Codex\igiraneza-patrick-portfolio\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node
+ ⚠ Attempted to load @next/swc-win32-x64-msvc, but an error occurred: \\?\C:\Users\Pazzo\Documents\Codex\igiraneza-patrick-portfolio\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node is not a valid Win32 application.
+\\?\C:\Users\Pazzo\Documents\Codex\igiraneza-patrick-portfolio\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node
+ ✓ Compiled successfully in 20.1s
+   Linting and checking validity of types ...
+   Collecting page data ...
+ ⚠ Attempted to load @next/swc-win32-x64-msvc, but an error occurred: \\?\C:\Users\Pazzo\Documents\Codex\igiraneza-patrick-portfolio\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node is not a valid Win32 application.
+\\?\C:\Users\Pazzo\Documents\Codex\igiraneza-patrick-portfolio\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node
+   Generating static pages (0/27) ...
+   Generating static pages (6/27) 
+   Generating static pages (13/27) 
+   Generating static pages (20/27) 
+ ✓ Generating static pages (27/27)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                      179 B         111 kB
+├ ○ /_not-found                            161 B         103 kB
+├ ○ /admin                                 161 B         103 kB
+├ ƒ /api/health                            161 B         103 kB
+├ ƒ /api/payments                          161 B         103 kB
+├ ƒ /api/reports                           161 B         103 kB
+├ ƒ /api/search                            161 B         103 kB
+├ ƒ /api/tickets/[ticketId]                161 B         103 kB
+├ ƒ /api/webhooks/airtel                   161 B         103 kB
+├ ƒ /api/webhooks/momo                     161 B         103 kB
+├ ○ /auth/login                          1.36 kB         117 kB
+├ ○ /auth/profile                          161 B         103 kB
+├ ○ /auth/register                       1.61 kB         117 kB
+├ ○ /auth/reset-password                 1.27 kB         114 kB
+├ ƒ /courses/[slug]                        176 B         111 kB
+├ ○ /dashboard                             175 B         106 kB
+├ ○ /dashboard/courses                     179 B         111 kB
+├ ○ /dashboard/courses/new                 161 B         103 kB
+├ ○ /dashboard/events                      179 B         111 kB
+├ ○ /dashboard/events/new                  161 B         103 kB
+├ ○ /dashboard/notifications               161 B         103 kB
+├ ○ /dashboard/overview                    161 B         103 kB
+├ ○ /dashboard/payments                    175 B         106 kB
+├ ○ /dashboard/reports                     175 B         106 kB
+├ ○ /dashboard/reviews                     161 B         103 kB
+├ ○ /dashboard/settings                    161 B         103 kB
+├ ○ /dashboard/tickets                     175 B         106 kB
+└ ƒ /events/[slug]                         176 B         111 kB
++ First Load JS shared by all             102 kB
+  ├ chunks/255-98a0bdaa30757bda.js       46.2 kB
+  ├ chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB
+  └ other shared chunks (total)          1.99 kB
+
+
+ƒ Middleware                             34.2 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
