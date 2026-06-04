@@ -8,7 +8,7 @@ const nav = [
   { href: "/#platform", label: "Platform" },
   { href: "/events/kigali-innovation-forum-2026", label: "Events" },
   { href: "/courses/founder-marketing-system", label: "Courses" },
-  { href: "/dashboard", label: "Dashboard" },
+  { href: "/dashboard", label: "" },
 ];
 
 type SiteHeaderProps = {
