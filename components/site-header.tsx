@@ -44,9 +44,6 @@ export function SiteHeader({ isLoggedIn }: SiteHeaderProps) {
           {isLoggedIn ? <LogoutButton /> : null}
           {!isLoggedIn ? (
             <div className="hidden items-center gap-3 md:flex">
-              <Badge variant="outline" className="border-primary/40 bg-primary/10 text-primary">
-                Rwanda SaaS
-              </Badge>
               <Button asChild variant="outline">
                 <Link href="/auth/login">Sign in</Link>
               </Button>
