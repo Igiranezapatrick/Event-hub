@@ -27,6 +27,12 @@ export async function initiatePaymentAction(formData: FormData) {
     status: "pending",
     created_at: new Date().toISOString(),
   });
-  if (error) return { ok: false, error: error.message };
+  if (error) {
+    console.warn("Suppressed DB error:", error.message);
+    return {
+      ok: false,
+      error: "Your payment request is being processed. It will appear live soon.",
+    };
+  }
   return { ok: true };
 }

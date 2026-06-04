@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Space_Grotesk } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
+import { createServerSupabase } from "@/lib/supabase/server";
 import "./globals.css";
 
 const sans = Space_Grotesk({
@@ -19,11 +20,15 @@ export const metadata: Metadata = {
     "A modern SaaS platform for creators, trainers, institutions, and businesses to publish, monetize, and manage events, bootcamps, workshops, and courses.",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const supabase = await createServerSupabase();
+  const { data } = await supabase.auth.getUser();
+  const isLoggedIn = Boolean(data?.user);
+
   return (
     <html lang="en" className={`${sans.variable} ${serif.variable}`}>
       <body>
-        <SiteHeader />
+        <SiteHeader isLoggedIn={isLoggedIn} />
         {children}
       </body>
     </html>

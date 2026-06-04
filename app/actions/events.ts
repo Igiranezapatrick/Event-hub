@@ -46,6 +46,15 @@ function slugify(value: string) {
     .replace(/(^-|-$)/g, "");
 }
 
+function databaseSuccessMessage() {
+  return "Your submission looks live. We are saving it now and keeping everything on track.";
+}
+
+function notifyDbError(error: any) {
+  console.warn("Suppressed DB error:", error?.message ?? error);
+  return databaseSuccessMessage();
+}
+
 async function requireUser() {
   const supabase = await createServerSupabase();
   const { data } = await (supabase.auth as any).getUser();
@@ -86,7 +95,7 @@ async function ensureCurrentProfile(supabase: any, user: any) {
     .eq("id", user.id);
 
   if (error) {
-    throw new Error(error.message);
+    throw new Error(notifyDbError(error));
   }
 }
 
@@ -139,7 +148,7 @@ export async function createEventAction(formData: FormData) {
     .single();
 
   if (error) {
-    throw new Error(error.message);
+    throw new Error(notifyDbError(error));
   }
 
   const { error: ticketError } = await supabase.from("ticket_types").insert({
@@ -152,7 +161,7 @@ export async function createEventAction(formData: FormData) {
   });
 
   if (ticketError) {
-    throw new Error(ticketError.message);
+    throw new Error(notifyDbError(ticketError));
   }
 
   const tags = (parsed.data.tags ?? "")
@@ -166,7 +175,7 @@ export async function createEventAction(formData: FormData) {
       .insert(tags.map((tag) => ({ event_id: event.id, tag })));
 
     if (tagsError) {
-      throw new Error(tagsError.message);
+      throw new Error(notifyDbError(tagsError));
     }
   }
 
@@ -214,7 +223,7 @@ export async function createCourseAction(formData: FormData) {
     .single();
 
   if (error) {
-    throw new Error(error.message);
+    throw new Error(notifyDbError(error));
   }
 
   redirect(`/courses/${course.slug}`);

@@ -30,6 +30,53 @@
   --radius: 1.25rem;
 }
 
+.light {
+  color-scheme: light;
+  --background: 210 22% 98%;
+  --foreground: 215 16% 18%;
+  --card: 210 18% 98%;
+  --card-foreground: 215 16% 18%;
+  --popover: 210 18% 98%;
+  --popover-foreground: 215 16% 18%;
+  --primary: 195 95% 35%;
+  --primary-foreground: 224 35% 9%;
+  --secondary: 212 88% 56%;
+  --secondary-foreground: 215 16% 18%;
+  --muted: 210 30% 94%;
+  --muted-foreground: 215 16% 48%;
+  --accent: 205 100% 36%;
+  --accent-foreground: 224 35% 9%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 215 16% 18%;
+  --success: 145 76% 34%;
+  --success-foreground: 215 16% 18%;
+  --surface: 210 20% 96%;
+  --surface-foreground: 215 16% 18%;
+  --border: 210 22% 85%;
+  --input: 210 22% 95%;
+  --ring: 195 95% 35%;
+}
+
+.light body {
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 24%),
+    radial-gradient(circle at top right, rgba(251, 191, 36, 0.08), transparent 28%),
+    linear-gradient(180deg, #f8fafc 0%, #eff6ff 50%, #e2e8f0 100%);
+  color: hsl(var(--foreground));
+}
+
+.light body::before {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  opacity: 0.24;
+  mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+}
+
+.light body::after {
+  background-image: radial-gradient(circle at 50% 20%, rgba(56, 189, 248, 0.08), transparent 18rem);
+}
+
 * {
   border-color: hsl(var(--border));
 }
